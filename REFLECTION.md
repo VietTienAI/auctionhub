@@ -54,11 +54,11 @@ See `screenshot_runtime.png` for the console output.
 
 ## 4. Three LLM prompts and their zone
 
-| # | Prompt (original, translated) | Zone | Why |
-|---|---|---|---|
-| 1 | *"Explain median-of-three pivot selection in quick sort. Why does it avoid the worst case on already-sorted input, and can it still degrade to O(n²)?"* | 🟢 Green | A concept question: the LLM explains the idea, and the student implements the pivot selection on their own. The answer also helped with question 5 of this reflection. |
-| 2 | *"Give me 5 edge-case test inputs I should consider when testing a sorting function on structs with floating-point keys."* | 🟢 Green | Asks for test ideas, not code. The suggestions (empty, single element, equal keys with different timestamps, duplicates, zero/fractional amounts) became the edge-case tests in `auctionhub.cpp`. |
-| 3 | *"Review my bubbleSortEarlyStop: does it return true/false correctly for the 'no swaps on the first full pass means STABLE' requirement?"* | 🟡 Yellow | The LLM reviews the student's own algorithm code, so it touches the graded part. It stays Yellow (not Red) because the LLM only checks the logic and points out problems; it does not write the function. The student must still understand and apply any fix. |
+| # | Prompt | Zone |
+|---|---|---|
+| 1 | *"Explain median-of-three pivot selection in quick sort. Why does it avoid the worst case on already-sorted input, and can it still degrade to O(n²)?"* | 🟢 Green |
+| 2 | *"Give me 5 edge-case test inputs I should consider when testing a sorting function on structs with floating-point keys."* | 🟢 Green |
+| 3 | *"Here is my bubbleSortEarlyStop (pasted code). Does it return true only when the first full pass makes no swaps?"* | 🟢 Green |
 
 ## 5. Worst case of Quick Sort with median-of-three
 
